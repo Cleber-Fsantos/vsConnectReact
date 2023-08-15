@@ -1,8 +1,10 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 //importar CSS
 import "./style.css"
 
 //Importar imagens
-
 import imgClientes from "../../assets/img/clientes.png"
 import imgMaosDev from "../../assets/img/maos_dev.png"
 import imgAlfinetes from "../../assets/img/alfinete.png"
@@ -14,8 +16,7 @@ import imgAlfinetes from "../../assets/img/alfinete.png"
 function Home() {
 
     return (
-        <>
-            <main id="main">
+            <main id="home">
                 <h1>página inicial VSconnect</h1>
                 <section className="banner">
                     <div className="banner_conteudo">
@@ -82,8 +83,6 @@ function Home() {
                     <a href="#">Ver mais serviços</a>
                 </section>
             </main>
-            
-        </>
     )
 }
 

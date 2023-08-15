@@ -1,5 +1,18 @@
-function CadastroServ(){
+//importar CSS
+import "./style.css"
 
+function CadastroServ(){
+//Colocar a mascara de valor em Real
+function mascaraValor(event:any) {
+  let valorDigitado = event.target.value; // Obtém o valor do elemento que acionou o evento, neste caso o valor digitado no input
+
+  valorDigitado = valorDigitado.replace(/\D/g, ''); // Remove todos os caracteres não numéricos do valor (deixa apenas os dígitos)
+  valorDigitado = (valorDigitado / 100).toFixed(2) + ""; // Divide o valorDigitado por 100, arredonda para duas casas decimais e converte em string
+  valorDigitado = valorDigitado.replace(".", ","); // Substitui o ponto decimal por vírgula
+  valorDigitado = valorDigitado.replace(/(\d)(\d{3})(\d{3}),/g, "$1.$2.$3,"); // Adiciona separadores de milhar e vírgula para valores acima de 1000
+  valorDigitado = valorDigitado.replace(/(\d)(\d{3}),/g, "$1.$2,"); // Adiciona separadores de milhar e vírgula para valores abaixo de 1000
+  event.target.value = `R$ ${valorDigitado}`; // Define o valor do elemento que disparou o evento como "R$ " seguido do valor formatado
+}
     
 <main className="main_cad_servico">
   <div className="container container_cad_serv">
@@ -29,7 +42,7 @@ function CadastroServ(){
           <input
             type="text"
             id="proposta"
-            onkeyup="mascaraValor(event)"
+            onKeyUp= {mascaraValor}
             maxLength={17}
             placeholder="Digite o valor que deseja pagar:"
           />
@@ -40,7 +53,7 @@ function CadastroServ(){
           <span>Selecione uma Skill para adicionar</span>
           <div className="cad_linha_select">
             <select name="" id="cad_select_skill">
-              <option value="" selected="" disabled="">
+              <option value='" selected=" disabled=""'>
                 Selecione
               </option>
             </select>
