@@ -212,7 +212,7 @@ main#home ul li {
     font-family: var(--font2);
 }
 
-#home main ul{
+main#home ul{
     margin: 50px 0 50px 25px;
 }
 
@@ -326,7 +326,7 @@ main#home ul li {
         padding: 0;
     }
 
-    #home main ul {
+    main#home ul {
         text-align: initial;
     }
 
@@ -360,11 +360,11 @@ main#home ul li {
         font-size: 22px;
     }
 
-    #home main ul {
+   main#home ul {
         margin: 40px 0;
     }
 
-    #home main ul li {
+    main#home ul li {
         font-size: 17px;
     }
 
