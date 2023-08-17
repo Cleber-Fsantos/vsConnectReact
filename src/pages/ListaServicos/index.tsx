@@ -24,7 +24,7 @@ export default function ListaServicos() {
             valor: "R$ 1200,00",
             descricao: "Preciso fazer um software que permita ao usuário fazer o upload de seu extrato bancário em formato( ofx). Dentro do software o mesmo poderá categorizar todas as suas receitas e despesas, tendo categorias sugeridas pelo software e permitindo também personalizações. Após o lançamento de vários extratos o software irá entender que são lançamentos parecidos e fará a categorização de maneira automática, cabendo ao usuário somente categorizar as receitas e despesas que não se repetem. Após a categorização o software irá emitir gráficos e relatórios baseados na categorização das contas.",
             skills: ["Python"]
-        },
+        }
     ]);
 
     const [skillDigitada, setSkillDigitada] = useState<string>("");
