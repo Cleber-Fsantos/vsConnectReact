@@ -33,7 +33,8 @@ export default function ListaDevs() {
 
     function retornoDevsGeral(event: any){
         if(event.target.value === ""){
-    listarDesenvolvedores()        }
+            listarDesenvolvedores()       
+         }
         setSkillDigitada(event.target.value)
     }
 
@@ -41,7 +42,7 @@ export default function ListaDevs() {
         api.get("users").then((response: any) => {
             console.log(response.data)
             setDevs(response.data)
-        })
+    })
     }
     return (
         <main id="lista-devs">
