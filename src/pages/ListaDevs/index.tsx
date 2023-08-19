@@ -68,6 +68,7 @@ export default function ListaDevs() {
                                             nome={dev.nome}
                                             email={dev.email}
                                             techs={dev.hardSkills}
+                                            id={dev.id}
                                         />
                                     </li>
                                 }

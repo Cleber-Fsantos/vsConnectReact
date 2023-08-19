@@ -8,10 +8,10 @@ import {Route, Routes, BrowserRouter } from "react-router-dom"
 import Home from './pages/Home'
 import ListaServicos from './pages/ListaServicos'
 import ListaDevs from './pages/ListaDevs'
+import PerfilUsuario from './pages/PerfilUsuario'
 //Importar os Componentes
 import Header from './components/Header'
 import Footer from './components/Footer'
-
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -21,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/' element={ <Home /> } />
         <Route path='lista/servicos' element={<ListaServicos />} />
         <Route path='lista/devs' element={ <ListaDevs /> } />
+        <Route path='perfil/:idUsuario' element={ <PerfilUsuario /> } />
       </Routes>
       <Footer />
     </BrowserRouter>

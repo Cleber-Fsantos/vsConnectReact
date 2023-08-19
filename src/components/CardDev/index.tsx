@@ -1,4 +1,5 @@
 import "./style.css"
+import { Link } from "react-router-dom"
 
 export default function CardDev(props: any) {
 
@@ -7,7 +8,8 @@ export default function CardDev(props: any) {
             <div className="grupo_contato">
                 <img src={"http://localhost:3000/static/" + props.foto } alt="" />
                 <div className="contato_dev">
-                    <h3>{ props.nome }</h3>
+                    <Link to={ "/perfil/" + props.id } > { props.nome}</Link>
+                    {/* <h3>{ props.nome }</h3> */}
                     <p>{ props.email }</p>
                 </div>
             </div>
