@@ -68,6 +68,7 @@ export default function ListaServicos() {
                                             servValor={servico.valor}
                                             servDescricao={servico.descricao}
                                             servTechs={servico.techs}
+                                            id={servico.id}
                                         />
                                     </li>
                                 }
